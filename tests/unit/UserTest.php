@@ -3,7 +3,9 @@
     use PHPUnit\Framework\TestCase;
 
     class UserTest extends TestCase {
-        public function testThatCanSetTheFirstName() {
+        // using @ test removes the need to have test before the funcs names
+        /** @test */
+        public function canSetTheFirstName() {
             $user = new \App\Models\User;
             $user->setFirstName('Billy');
             $this->assertEquals($user->getFirstName(), 'Billy');
